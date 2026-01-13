@@ -10,11 +10,36 @@ package btvn1;
  */
 public class Btvn1 {
 
-    /**
-     * @param args the command line arguments
-     */
+        public static void demSNT1k() {
+    int count = 0;  // number of primes found
+    int num = 2;    // number to check
+
+    while (count < 1000) {
+        boolean isPrime = true;
+        if (num < 2) {
+            isPrime = false;
+        } else {
+            for (int i = 2; i * i <= num; i++) {
+                if (num % i == 0) {
+                    isPrime = false;
+                    break;
+                }
+            }
+        }
+
+        if (isPrime) {
+            System.out.print(num + " ");
+            count++;
+            if (count % 10 == 0) {  
+                System.out.println();
+            }
+        }
+
+        num++;
+    }
+}
     public static void main(String[] args) {
-        // TODO code application logic here
+        demSNT1k();
     }
     
 }
