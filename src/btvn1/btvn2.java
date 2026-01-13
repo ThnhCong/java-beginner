@@ -4,34 +4,33 @@
  */
 package btvn1;
 
-import java.util.Scanner;
-
-/**
- *
- * @author wayne
- */
 public class btvn2 {
 
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+    public static void YourName() {
+        java.util.Scanner banphim = new java.util.Scanner(System.in);
 
         System.out.print("Nhập tên: ");
-        String ten = sc.nextLine();
+        String name = banphim.nextLine();
 
         System.out.print("Nhập tuổi: ");
-        int tuoi = sc.nextInt();
+        int tuoi = banphim.nextInt();
 
-        System.out.print("Nhập chieu cao: ");
-        double chieucao = sc.nextDouble();
-        
-        System.out.print("Nhập can nag: ");
-        int cannang = sc.nextInt();
+        System.out.print("Nhập cân nặng (kg): ");
+        double canNang = banphim.nextDouble();
 
-        System.out.println("\n--- Thông tin vừa nhập ---");
-        System.out.println("Tên: " + ten);
+        System.out.print("Nhập chiều cao (m): ");
+        double chieuCao = banphim.nextDouble();
+
+        System.out.println("\n--- Thông tin đã nhập ---");
+        System.out.println("Tên: " + name);
         System.out.println("Tuổi: " + tuoi);
-        System.out.println("chieu cao: " + chieucao + "cm");
-        System.out.println("can nang: " + cannang + "kg");
+        System.out.println("Cân nặng: " + canNang + " kg");
+        System.out.println("Chiều cao: " + chieuCao + " m");
+    }
+
+    public static void main(String[] args) {
+        YourName();
     }
 }
+
 
