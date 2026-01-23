@@ -10,17 +10,33 @@ package data;
  */
 public class CD {
     int cccd;
-    String Name;
-    String birth;
-    String coun;
-    String sex;
+    String ten;
+    int namsinh;
     
-    public CD(int icccd, String iName, String iBirth, String ique, String isex) {
-        cccd = icccd;
-        Name = iName;
-        birth = iBirth;
-        coun = ique;
-        sex = isex;
+    public CD(int cccd, String ten, int namsinh) {
+        this.cccd = cccd;
+        this.ten = ten;
+        this.namsinh = namsinh;
     }
-           
+    public void TuoiBauCu(){
+        if (2026 - namsinh > 18){
+            System.out.println(ten + "Được đi bầu cử");
+        }
+        else {System.out.print("Ko Được đi bầu cử");}
+    }
+    
+    public void ThongTinCD(){
+        System.out.println("number cccd: " + cccd);
+        System.out.println("Ho va ten: " + ten);
+    }
+    
+    public static void main(String[] args) {
+
+        // ✅ Tạo đối tượng ĐÚNG
+        CD cd = new CD(12345, "Cong", 2015);
+
+        // ✅ Gọi hàm ĐÚNG
+        cd.ThongTinCD();
+        cd.TuoiBauCu();
+    }
 }

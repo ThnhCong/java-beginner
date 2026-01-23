@@ -9,16 +9,28 @@ package data;
  * @author wayne
  */
 public class monhoc {
-    private String name;
-    private String id;
-    private String solop;
-    private String giaovien;
-
+    String tenmon;
+    int sotinchi;
     
-    public monhoc(String iName, String iNN, String iemail, String inumber) {
-        name = iName;
-        solop = iNN;
-        giaovien = iemail;
-        id = inumber;
+    public monhoc(String tenmon, int sotinchi){
+        this.tenmon = tenmon;
+        this.sotinchi = sotinchi;
+    }
+    
+    public void kiemTraMonThucHanh(){
+        if (this.sotinchi >= 3) {
+            System.out.println("Môn học nặng");
+        }
+        else{System.out.println("Môn học nhẹ");}
+    }
+    
+    public void tinhHocPhi(){
+        System.out.println("Tong so tien mon hoc nay la: "+ this.sotinchi * 500 + "k" );
+    }
+    public static void main(String[] args){
+        monhoc mh = new monhoc("OOP", 3);
+        
+        mh.kiemTraMonThucHanh();
+        mh.tinhHocPhi();
     }
 }

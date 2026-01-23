@@ -9,16 +9,37 @@ package data;
  * @author wayne
  */
 public class dienvien {
-    private String name;
-    private String nickname;
-    private int sobophim;
-    private String nghedanh;
-
+    String tenKhaiSinh;
+    String ngheDanh;
+    String nickName;
+    int soBoPhimDong;
     
-    public dienvien(String iName, String iNN, String iemail, int inumber, String icountry) {
-        name = iName;
-        nickname = iNN;
-        nghedanh = iemail;
-        sobophim = inumber;
+    public dienvien(String tenKhaiSinh, String ngheDanh, String nickName, int soBoPhimDong) {
+        this.tenKhaiSinh = tenKhaiSinh;
+        this.ngheDanh = ngheDanh;
+        this.nickName = nickName;
+        this.soBoPhimDong = soBoPhimDong;
     }
+    
+    private double CatseDV(){
+        double catse = soBoPhimDong * 20000000;
+        return catse;
+    }
+    
+    public void tinhCatSeDuKien(){
+        System.out.println("Cat se nhan dc la: " + CatseDV());
+    }
+    
+    public void doiNgheDanh(String ngheDanhMoi) {
+    this.ngheDanh = ngheDanhMoi;
+    System.out.println("Đã đổi nghệ danh thành: " + this.ngheDanh);
 }
+    
+    public static void main(String[] args) {
+        dienvien dv = new dienvien("Cong", "VuaKpop", "Narubako", 12);
+        
+        dv.tinhCatSeDuKien();
+        dv.doiNgheDanh("ConGaCon");
+    }    
+}
+    
