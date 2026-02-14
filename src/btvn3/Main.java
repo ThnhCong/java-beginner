@@ -13,7 +13,7 @@ public class Main {
         Scanner sc = new Scanner(System.in);
 
         //1
-        System.out.println("=== SO PHUC ===");
+        System.out.println("Bai 1");
         sophuc sp1 = new sophuc();
         sophuc sp2 = new sophuc();
 
@@ -42,7 +42,7 @@ public class Main {
         System.out.println("Module so phuc 1: " + sp1.Module());
 
         //2
-        System.out.println("\n=== DIEM 2D ===");
+        System.out.println("\n Bai2");
         Diem A = new Diem(3, 4);
         Diem B = new Diem(1, 2);
 
@@ -63,13 +63,13 @@ public class Main {
         C.Xuat();
 
         //3
-        System.out.println("\n=== THOI GIAN ===");
+        System.out.println("\n Bai3");
         Time t1 = new Time(1, 65, 50);
         Time t2 = new Time(0, 30, 20);
 
-        System.out.print("Thoi gian t1: ");
+        System.out.print("t1: ");
         t1.Xuat();
-        System.out.print("Thoi gian t2: ");
+        System.out.print("t2: ");
         t2.Xuat();
 
         Time tongTG = t1.Cong(t2);
