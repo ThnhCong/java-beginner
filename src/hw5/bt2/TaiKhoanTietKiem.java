@@ -13,13 +13,16 @@ public class TaiKhoanTietKiem extends TaiKhoan {
     private int kyHan;
     private double laiSuat;
     private boolean daDenHan;
-
+    
     public TaiKhoanTietKiem(double soDu, int kyHan, double laiSuat) {
         super(soDu);
         this.kyHan = kyHan;
         this.laiSuat = laiSuat;
         this.daDenHan = false;
+        super.tonglaisuat += laiSuat - super.laisuatchung;
     }
+    
+    
 
     @Override
     public void rutTien(double soTien) {

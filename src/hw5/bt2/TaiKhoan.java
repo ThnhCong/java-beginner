@@ -10,11 +10,24 @@ package hw5.bt2;
  */
 public class TaiKhoan {
     protected double soDu;
-
+    public static double laisuatchung = 0.005;
+    public static double tonglaisuat;
+    
     public TaiKhoan(double soDu) {
         this.soDu = soDu;
+        tonglaisuat += laisuatchung;
     }
 
+    public static double getLaisuatchung() {
+        return laisuatchung;
+    }
+
+    public static double getTonglaisuat() {
+        return tonglaisuat;
+    }
+    
+    
+    
     public void napTien(double soTien) {
         soDu += soTien;
         System.out.println("Nap thanh cong. So du = " + soDu);
